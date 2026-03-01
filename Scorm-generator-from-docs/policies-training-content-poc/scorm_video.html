@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Policy Training Video</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f8f8f8; }
+        .video-container { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px #ccc; max-width: 800px; margin: auto; }
+        h1 { text-align: center; }
+        video { width: 100%; border-radius: 8px; margin-bottom: 20px; }
+        .desc { font-size: 18px; color: #333; text-align: center; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <h1>Policy Training Video</h1>
+        <!-- Dynamically show all video parts if present -->
+        <script>
+        const videoFiles = [];
+        let checked = 0;
+        for (let i = 1; i <= 10; i++) { // Support up to 10 parts
+            const fname = `output_part${i}.mp4`;
+            fetch(fname, { method: 'HEAD' }).then(r => {
+                checked++;
+                if (r.ok) videoFiles.push(fname);
+                if (checked === 10) {
+                    if (videoFiles.length === 0) videoFiles.push('output.mp4');
+                    renderVideos();
+                }
+            });
+        }
+        function renderVideos() {
+            const container = document.querySelector('.video-container');
+            videoFiles.forEach((file, idx) => {
+                const label = videoFiles.length > 1 ? `<div style='text-align:center;font-weight:bold;margin-bottom:8px;'>Part ${idx+1}</div>` : '';
+                container.innerHTML += `${label}<video controls><source src='${file}' type='video/mp4'>Your browser does not support the video tag.</video>`;
+            });
+        }
+        </script>
+            <div class="desc">
+                This video summarizes the key points of the policy document.
+            </div>
+            <!-- PPT download link moved to end of course menu -->
+    </div>
+</body>
+</html>

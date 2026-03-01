@@ -1,0 +1,10 @@
+python-pptx
+PyPDF2
+gtts
+pyttsx3
+ffmpeg-python
+Pillow
+requests
+google-generativeai
+pydub
+scormcloud

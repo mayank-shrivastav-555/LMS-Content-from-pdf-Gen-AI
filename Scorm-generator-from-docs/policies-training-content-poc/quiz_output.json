@@ -1,0 +1,57 @@
+[
+  {
+    "question": "During a procedure, a surgeon asks for your opinion on using an SI-BONE implant for a patient condition not listed in the product's official labeling. What is the correct response?",
+    "options": [
+      "Share your personal opinion based on past experiences, but state that it's not official medical advice.",
+      "Decline to comment on clinical applications and refer the surgeon to SI-BONE's Medical Affairs department.",
+      "Provide the technical specifications of the implant and let the surgeon decide how to apply them.",
+      "Suggest they search for published clinical studies on the topic after the procedure is complete."
+    ],
+    "correct_answer_index": 1,
+    "correct_answer": "Decline to comment on clinical applications and refer the surgeon to SI-BONE's Medical Affairs department."
+  },
+  {
+    "question": "While observing a surgery from your designated area, a scrub tech asks you to quickly adjust an instrument on the sterile mayo stand. What is the appropriate action?",
+    "options": [
+      "Politely decline, explaining that you are not permitted to enter the sterile field.",
+      "Quickly put on a pair of sterile gloves and make the adjustment to help the team.",
+      "Ask the surgeon for permission to enter the sterile field to provide assistance.",
+      "Wait for a moment when no one is looking and make the adjustment to be helpful."
+    ],
+    "correct_answer_index": 0,
+    "correct_answer": "Politely decline, explaining that you are not permitted to enter the sterile field."
+  },
+  {
+    "question": "You receive an email from a surgeon's office containing a patient's full medical chart. According to policy, what are the required steps you must take?",
+    "options": [
+      "Delete the email immediately and do not respond to the sender.",
+      "Forward the email to your manager and wait for instructions on how to proceed.",
+      "Print the chart for the case and then shred it, notifying the sender to be more careful.",
+      "Immediately notify the sender, report the incident to SI-BONE Compliance, and then destroy the information."
+    ],
+    "correct_answer_index": 3,
+    "correct_answer": "Immediately notify the sender, report the incident to SI-BONE Compliance, and then destroy the information."
+  },
+  {
+    "question": "A physician's practice manager calls you for advice on which billing codes to use for a recent SI-BONE procedure. How should you handle this inquiry?",
+    "options": [
+      "Provide the codes you have seen other practices use successfully.",
+      "State that you cannot provide coding advice and direct them to the official SI-BONE reimbursement resources.",
+      "Suggest they use a general code and let the insurance company determine its appropriateness.",
+      "Refer them to a more experienced sales representative in your region for guidance."
+    ],
+    "correct_answer_index": 1,
+    "correct_answer": "State that you cannot provide coding advice and direct them to the official SI-BONE reimbursement resources."
+  },
+  {
+    "question": "You are scheduled to support a case at a new hospital. Their vendor credentialing policy is more restrictive than SI-BONE's corporate policy. Which policy must you follow?",
+    "options": [
+      "Follow the SI-BONE policy, as it is the standard for all company representatives.",
+      "Contact your manager to get an exemption from the hospital's policy.",
+      "Comply with the hospital's more restrictive policy, as local facility rules take precedence.",
+      "Negotiate with the hospital's credentialing office to meet a standard halfway between both policies."
+    ],
+    "correct_answer_index": 2,
+    "correct_answer": "Comply with the hospital's more restrictive policy, as local facility rules take precedence."
+  }
+]

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Policy Training Quiz</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f8f8f8; }
+        .quiz-container { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px #ccc; max-width: 600px; margin: auto; }
+        h1 { text-align: center; }
+        .question { margin-bottom: 20px; }
+        .options label { display: block; margin-bottom: 8px; }
+        .submit-btn { background: #0078d7; color: #fff; border: none; padding: 12px 24px; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        .result { margin-top: 20px; font-size: 18px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Policy Training Quiz</h1>
+        <form id="quizForm"></form>
+        <button class="submit-btn" onclick="submitQuiz()">Submit Quiz</button>
+        <div class="result" id="result"></div>
+    </div>
+    <script>
+        async function loadQuiz() {
+            try {
+                const response = await fetch('quiz_output.json');
+                const quizData = await response.json();
+                const form = document.getElementById('quizForm');
+                quizData.forEach((q, idx) => {
+                    const qDiv = document.createElement('div');
+                    qDiv.className = 'question';
+                    qDiv.innerHTML = `<strong>Q${idx+1}: ${q.question}</strong>`;
+                    const optionsDiv = document.createElement('div');
+                    optionsDiv.className = 'options';
+                    q.options.forEach((opt, i) => {
+                        const id = `q${idx}_opt${i}`;
+                        optionsDiv.innerHTML += `<label><input type='radio' name='q${idx}' value='${i}' id='${id}'> ${opt}</label>`;
+                    });
+                    qDiv.appendChild(optionsDiv);
+                    form.appendChild(qDiv);
+                });
+                window.quizData = quizData;
+            } catch (e) {
+                document.getElementById('quizForm').innerHTML = '<p>Could not load quiz data.</p>';
+            }
+        }
+        function submitQuiz() {
+            let score = 0;
+            const quizData = window.quizData || [];
+            quizData.forEach((q, idx) => {
+                const selected = document.querySelector(`input[name='q${idx}']:checked`);
+                if (selected && parseInt(selected.value) === q.correct_answer_index) {
+                    score++;
+                }
+            });
+            const percent = quizData.length ? Math.round((score / quizData.length) * 100) : 0;
+            document.getElementById('result').innerText = `Your Score: ${score} / ${quizData.length} (${percent}%)`;
+        }
+        window.onload = loadQuiz;
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" identifier="policy-training-scorm" version="1.2" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd     http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <organizations default="org1">
+    <organization identifier="org1">
+      <item identifier="item_video_1" identifierref="res_video_1">
+        <title>Your Role: Technical Expert, Not Medical Advisor</title>
+      </item>
+      <item identifier="item_video_2" identifierref="res_video_2">
+        <title>Maintaining Professional &amp; Physical Boundaries</title>
+      </item>
+      <item identifier="item_video_3" identifierref="res_video_3">
+        <title>On-Site Conduct and Compliance</title>
+      </item>
+      <title>CORP-0021 Case Coverage and Patient Privacy Policy 2024-05</title>
+      <item identifier="item2" identifierref="res_quiz">
+        <title>Policy Training Quiz</title>
+      </item>
+      <item identifier="item_ppt" identifierref="ppt_resource">
+        <title>Download Slides (PPT)</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="res_quiz" type="webcontent" adlcp:scormType="asset" href="scorm_quiz.html">
+      <file href="scorm_quiz.html" />
+      <file href="quiz_output.json" />
+    </resource>
+    <resource identifier="ppt_resource" type="webcontent" href="CORP-0021 Case Coverage and Patient Privacy Policy 2024-05.pptx">
+      <file href="CORP-0021 Case Coverage and Patient Privacy Policy 2024-05.pptx" />
+    </resource>
+    <resource identifier="res_video_1" type="webcontent" href="scorm_video_part1.html" adlcp:scormType="asset">
+      <file href="scorm_video_part1.html" />
+      <file href="output_part1.mp4" />
+    </resource>
+    <resource identifier="res_video_2" type="webcontent" href="scorm_video_part2.html" adlcp:scormType="asset">
+      <file href="scorm_video_part2.html" />
+      <file href="output_part2.mp4" />
+    </resource>
+    <resource identifier="res_video_3" type="webcontent" href="scorm_video_part3.html" adlcp:scormType="asset">
+      <file href="scorm_video_part3.html" />
+      <file href="output_part3.mp4" />
+    </resource>
+  </resources>
+</manifest>
